@@ -1,11 +1,11 @@
 package com.skyscanner.page_objects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
-import resouces.Helpers;
-import resouces.Pages;
+import com.skyscanner.resources.Helpers;
+import com.skyscanner.resources.Pages;
 
 public class HomePage extends Pages {
 	@FindBy(id = "tab-flight-tab")
@@ -26,6 +26,10 @@ public class HomePage extends Pages {
 	@FindBy(id = "flight-departing")
 	private WebElement _departingCalender;
 
+	@CacheLookup
+	@FindBy(id = "advanced-flight-nonstop")
+	private WebElement _directFlightChkBox;
+
 	public HomePage selectFlightsTab() {
 		_flightsTab.click();
 		return this;
@@ -42,13 +46,11 @@ public class HomePage extends Pages {
 
 	public HomePage enterOrigin(String origin) {
 		_originTxtBox.sendKeys(origin);
-		driver.findElement(By.linkText(origin)).click();
 		return this;
 	}
 
 	public HomePage enterDestination(String destination) {
 		_destinationTxtBox.sendKeys(destination);
-		driver.findElement(By.linkText(destination)).click();
 		return this;
 	}
 
@@ -59,6 +61,11 @@ public class HomePage extends Pages {
 
 	public HomePage selectDepartingDate() {
 		_departingCalender.sendKeys(new Helpers().getCurrentDate());
+		return this;
+	}
+
+	public HomePage selectDirectFlight() {
+		_directFlightChkBox.click();
 		return this;
 	}
 

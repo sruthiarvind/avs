@@ -2,10 +2,11 @@ package com.skyscanner.steps;
 
 import org.junit.Assert;
 
+import com.skyscanner.resources.Pages;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import resouces.Pages;
 
 public class SearchFlightsSteps {
 
@@ -17,7 +18,17 @@ public class SearchFlightsSteps {
 	@When("^I seach for flight from \"(.*?)\" to \"(.*?)\"$")
 	public void i_seach_for_flight_from_to(String origin, String destination) {
 		Pages.home().selectFlightsTab().clickOnOneWay().enterOrigin(origin).enterDestination(destination)
-				.selectDepartingDate().clickOnSearchBtn();
+				.selectDepartingDate();
+	}
+
+	@When("^I click on direct flight$")
+	public void i_enter_click_on_direct_flight() {
+		Pages.home().selectDirectFlight();
+	}
+
+	@When("^I click on search$")
+	public void i_click_on_search() {
+		Pages.home().clickOnSearchBtn();
 	}
 
 	@Then("^I see some related flight details$")

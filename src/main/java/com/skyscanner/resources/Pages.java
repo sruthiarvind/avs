@@ -1,5 +1,6 @@
-package resouces;
+package com.skyscanner.resources;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -9,6 +10,7 @@ import com.skyscanner.page_objects.ResultsPage;
 
 public class Pages {
 	public static WebDriver driver;
+	public static Logger LOG = Logger.getLogger(Pages.class);
 
 	static <T> T getPages(T page) {
 		driver = new BaseMain().getDriver();
