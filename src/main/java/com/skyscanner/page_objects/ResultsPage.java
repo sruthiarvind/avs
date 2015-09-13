@@ -3,7 +3,7 @@ package com.skyscanner.page_objects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import resouces.Pages;
+import com.skyscanner.resources.Pages;
 
 public class ResultsPage extends Pages {
 

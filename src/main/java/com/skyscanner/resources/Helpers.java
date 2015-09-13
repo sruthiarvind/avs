@@ -1,4 +1,4 @@
-package resouces;
+package com.skyscanner.resources;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
