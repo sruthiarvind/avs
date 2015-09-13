@@ -8,7 +8,6 @@ public class SearchFlightsSteps {
 
 	@Given("^I am on homepage$")
 	public void i_am_on_homepage() {
-
 	}
 
 	@When("^I seach for flight from \"(.*?)\" to \"(.*?)\"$")
