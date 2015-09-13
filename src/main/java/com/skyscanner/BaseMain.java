@@ -8,16 +8,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
 
 public class BaseMain {
 
-	public BaseMain() {
-		PageFactory.initElements(driver, this);
-	}
-
 	static WebDriver driver;
 	Properties properties;
+
+	public WebDriver getDriver() {
+		return driver;
+	}
 
 	public void openBrowser() throws IOException {
 		properties = new Properties();
