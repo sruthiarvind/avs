@@ -9,5 +9,5 @@ Feature: One way flight
     Then I see some related flight details
 
     Examples: 
-      | origin                | destination     |
-      | London Heathrow (LHR) | Hyderabad (HYD) |
+      | origin                             | destination                               |
+      | London, England, UK (LHR-Heathrow) | Hyderabad, India (HYD-Rajiv Gandhi Intl.) |

@@ -16,7 +16,8 @@ public class SearchFlightsSteps {
 
 	@When("^I seach for flight from \"(.*?)\" to \"(.*?)\"$")
 	public void i_seach_for_flight_from_to(String origin, String destination) {
-
+		Pages.home().selectFlightsTab().clickOnOneWay().enterOrigin(origin).enterDestination(destination)
+				.selectDepartingDate().clickOnSearchBtn();
 	}
 
 	@Then("^I see some related flight details$")

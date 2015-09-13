@@ -8,7 +8,7 @@ import com.skyscanner.page_objects.HomePage;
 import com.skyscanner.page_objects.ResultsPage;
 
 public class Pages {
-	static WebDriver driver;
+	public static WebDriver driver;
 
 	static <T> T getPages(T page) {
 		driver = new BaseMain().getDriver();
