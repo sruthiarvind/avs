@@ -1,8 +1,16 @@
 package com.skyscanner.page_objects;
 
-public class ResultsPage {
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-	public void isOnResultsPage() {
+import resouces.Pages;
 
+public class ResultsPage extends Pages {
+
+	@FindBy(className = "title-city-text")
+	private WebElement _destinationTitleTxt;
+
+	public boolean isOnResultsPage() {
+		return _destinationTitleTxt.getText().matches("Select your departure to Hyderabad");
 	}
 }

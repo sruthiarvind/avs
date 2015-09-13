@@ -22,6 +22,6 @@ public class SearchFlightsSteps {
 
 	@Then("^I see some related flight details$")
 	public void i_see_some_related_flight_details() {
-
+		Assert.assertTrue(Pages.results().isOnResultsPage());
 	}
 }
