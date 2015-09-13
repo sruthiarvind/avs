@@ -1,13 +1,17 @@
 package com.skyscanner.steps;
 
+import org.junit.Assert;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import resouces.Pages;
 
 public class SearchFlightsSteps {
 
 	@Given("^I am on homepage$")
 	public void i_am_on_homepage() {
+		Assert.assertTrue(Pages.home().isOnHomePage());
 	}
 
 	@When("^I seach for flight from \"(.*?)\" to \"(.*?)\"$")
