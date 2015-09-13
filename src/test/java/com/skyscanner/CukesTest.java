@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = ".", monochrome = true, dryRun = true)
+@CucumberOptions(features = ".", monochrome = true, dryRun = false)
 public class CukesTest {
 
 }

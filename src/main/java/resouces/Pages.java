@@ -1,5 +1,6 @@
 package resouces;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.skyscanner.BaseMain;
@@ -7,9 +8,11 @@ import com.skyscanner.page_objects.HomePage;
 import com.skyscanner.page_objects.ResultsPage;
 
 public class Pages {
+	public static WebDriver driver;
 
 	static <T> T getPages(T page) {
-		PageFactory.initElements(new BaseMain().getDriver(), page);
+		driver = new BaseMain().getDriver();
+		PageFactory.initElements(driver, page);
 		return page;
 	}
 
